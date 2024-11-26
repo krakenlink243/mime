@@ -12,7 +12,7 @@ function upDate(previewPic){
      document.getElementById("image").innerText = previewPic.alt
        }
    
-       function unDo(){
+      function unDo(){
         /* In this function you should 
        1) Update the url for the background image of the div with the id = "image" 
        back to the orginal-image.  You can use the css code to see what that original URL was
@@ -23,3 +23,9 @@ function upDate(previewPic){
            var div = document.getElementById("image"); div.style.backgroundImage = 'url(' +  + ')';
        document.getElementById("image").innerText = "Hover over an image below to display here."
        }
+function tabfocus(){
+  var arr = document.getElementsByClassName("preview");
+  for (let index = 0; index < arr.length; index++) {
+    arr[index].setAttribute("tabindex",index);   
+  }
+}
